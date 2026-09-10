@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.ComponentModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +9,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp.ViewModel;
+using WpfApp.View;
 
 namespace WpfApp
 {
@@ -16,9 +19,12 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        LoginService loginService;
         public MainWindow()
         {
             InitializeComponent();
+            loginService = new LoginService(this);
+            DataContext = loginService; 
         }
     }
 }

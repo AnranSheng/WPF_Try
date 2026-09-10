@@ -29,11 +29,11 @@
                 <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="账号 :" VerticalAlignment="Center" FontSize="20" Margin="0,0,10,0"/>
-            <TextBox Grid.Column="1" Margin="5,5,5,5"/>
+            <TextBox Text="{Binding UserName}" Grid.Column="1" Margin="5,5,5,5" VerticalContentAlignment="Center"/>
             <TextBlock Text="密码 :" Grid.Row="1" VerticalAlignment="Center" FontSize="20" Margin="0,0,10,0"/>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="5,5,5,5"/>
+            <TextBox Text="{Binding PassWord}" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" VerticalContentAlignment="Center"/>
             <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="记住密码"/>
-            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="登录" Margin="50,5,50,5"/>
+            <Button Command="{Binding LoginCommand}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="登录" Margin="50,5,50,5"/>
         </Grid>
     </Grid>
 </Window>
